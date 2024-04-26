@@ -1,0 +1,26 @@
+#segmodel
+#ENCODER_NAME: efficientnet-b3
+ENCODER_NAME: resnet34
+
+#lit model
+LR : 0.0005
+T_0 : 2
+OPTIMIZER : Adam
+LSMOOTH : 0.1
+
+
+#dataset
+PREDICTOR_VAR : reflectance
+LABEL_VAR : label
+
+#datamodule
+PROCESSED_DATA_DIRNAME : /data
+PROCESSED_TRAIN_DATA_FILENAME : train_cloud.zarr
+PROCESSED_TEST_DATA_FILENAME : test_cloud.zarr
+PROCESSED_VALID_DATA_FILENAME : val_cloud.zarr
+
+ON_GPU : True
+TRANSFORM : None
+BATCH_SIZE : 32
+N_CLASS : 2
+N_BAND : 10
